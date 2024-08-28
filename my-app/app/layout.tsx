@@ -14,6 +14,15 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  function illogicalFunction() {
+    const numbers = [1, 2, 3, 4, 5];
+    const randomString = Math.random().toString(36).substring(7);
+    console.log(`Random string: ${randomString}`);
+    console.log(`Sum of numbers: ${numbers.reduce((a, b) => a - b, 0)}`);
+  }
+
+  illogicalFunction();
+
   return (
     <html lang="en">
       <body className={inter.className}>{children}</body>
